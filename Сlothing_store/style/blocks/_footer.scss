@@ -1,0 +1,51 @@
+.footer {
+    background-color: ($colorBgMain + #000002);
+    padding-top: 24px;
+    padding-bottom: 23px;
+    color: #fbfbfb;
+
+    &-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-text {
+        @include fontstyle(400, 16px, 19px);
+        color: #fbfbfb;
+    }
+}
+
+.network {
+    display: flex;
+    gap: 7px;
+
+    &-link {
+        width: 32px;
+        height: 32px;
+        color: #000000;
+        background-color: #ffffff;
+        text-decoration: none;
+        font-size: 15px;
+        // margin-left: 7px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        transition: all $timeTransNetwork;
+        transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86); /* easeInOutCirc */
+    }
+
+    &-link:hover {
+        background-color: $colorMain;
+        color: #ffffff;
+        transform: rotate(360deg);
+    }
+
+		&-link:focus {
+			outline: none;
+			background-color: $colorMain;
+			color: #ffffff;
+			transform: rotate(360deg);
+	}
+}

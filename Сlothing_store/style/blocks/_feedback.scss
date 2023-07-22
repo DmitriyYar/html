@@ -1,0 +1,95 @@
+.feedback {
+    background-image: url(../img/subscribe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 448px;
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.reviews {
+    width: 360px;
+    // height: 448px;
+    text-align: center;
+    margin-top: 87px;
+
+    &-text {
+        @include fontstyle(400, 20px, 24px);
+        color: #222224;
+        margin-top: 30px;
+    }
+
+    &-text span {
+        font-style: italic;
+    }
+}
+
+.subscription {
+    width: 400px;
+    text-align: center;
+    margin-top: 150px;
+
+    &-title {
+        @include fontstyle(700, 24px, 30px);
+        color: #222224;
+        margin-bottom: 30px;
+    }
+
+    &-text {
+        font-weight: 400;
+        font-size: 18px;
+    }
+}
+
+.subscribe-form {
+    display: flex;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+    &-field {
+        border: none;
+        background-color: #e1e1e1;
+        padding-left: 22px;
+        padding-right: 64px;
+        border-radius: 2em 0 0 2em;
+        @include fontstyle(400, 14px, 17px);
+        color: #222224;
+        opacity: 0.67;
+
+        &:focus {
+             outline: none;
+        }
+
+        // &:active {
+        //     border: none;
+        //     background-color: green;
+        // }
+    }
+
+    &-button {
+        border: none;
+        background-color: $colorMain;
+        padding: 16px 19px;
+        border-radius: 0 2em 2em 0;
+        @include fontstyle(400, 14px, 17px);
+        color: #ffffff;
+        transition: $timeTransLink;
+
+        &:hover {
+            background-color: $colorMain - #111111;
+            box-shadow: 5px 0px 12px $colorMain - #111111;
+        }
+
+				&:focus {
+					outline: none;
+					background-color: $colorMain - #111111;
+					box-shadow: 5px 0px 12px $colorMain - #111111;
+				}
+
+    }
+}

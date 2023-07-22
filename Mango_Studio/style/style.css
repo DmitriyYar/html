@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    height: 100vh; /* body, html {height: 100%;} */
+}
+
+.pos {
+    position: relative;
+}
+
+.parallax {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.container {
+    margin: 0 88px 0 141px;
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 54px;
+}
+
+.heading {
+    text-decoration: none;
+    font-family: "Long Cang", cursive;
+    color: #fc61ff;
+    font-size: 68px;
+    line-height: 68px;
+    letter-spacing: 0.02em;
+}
+
+.button-sort {
+    background-color: transparent;
+    border: none;
+    text-align: left;
+}
+
+/* ВЫПАДАЮЩЕЕ МЕНЮ */
+
+.drop-down-list {
+    display: none;
+}
+
+.drop-down-list {
+    outline: 1px solid red;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.position {
+    margin-top: 249px;
+    margin-left: 85px;
+}
+
+.button-sort:hover {
+	background-color: #fc61ff25;
+	border-radius: 50%;
+}
+
+.button-sort:active + .drop-down-list,
+.drop-down-list:hover {
+    display: block;
+}
+
+/* ******************************* */
+
+.categories-list {
+    flex-grow: 1;
+}
+
+.menu-list {
+    list-style-type: none;
+    font-family: "Lora", serif;
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: 0.02em;
+}
+
+.position-1 {
+    margin-top: 169px;
+}
+
+.menu-item {
+    padding-bottom: 40px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: #fc61ff;
+}
+
+.menu-link:hover {
+    border-bottom: 3px solid #fc61ff;
+}
+
+.menu-link-current {
+    border-bottom: 3px solid #fc61ff;
+}
+
+.network {
+    margin-bottom: 56px;
+    display: flex;
+    gap: 40px;
+}
+
+.bg {
+    background-image: url(../img/background.jpg);
+}
+
+.bg-1 {
+    background-image: url(../img/hair-1.jpg);
+}
+
+.bg-2 {
+    background-image: url(../img/hair-2.jpg);
+}
+
+.bg-3 {
+    background-image: url(../img/hair-3.jpg);
+}
+
+.bg-4 {
+    background-image: url(../img/hair-4.jpg);
+    background-size: contain;
+}
+
+.bg-5 {
+    background-image: url(../img/hair-5.jpg);
+}
+
+.bg-6 {
+    background-image: url(../img/hair-6.jpg);
+}
+
+.title-1-section {
+    padding: 305px 0;
+    font-family: "Lora";
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 154px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: 4px #d23cdf;
+}
+
+.text-price {
+    padding: 362px 0;
+    font-family: "Lora";
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 41px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #fc61ff;
+}
+
+.title-2-section {
+    padding: 305px 0;
+    font-family: "Lora";
+    font-weight: 700;
+    font-size: 102px;
+    line-height: 131px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: 4px #d23cdf;
+}
+
+.title-3-section {
+    padding: 305px 0;
+    font-family: "Lora";
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 123px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: rgba(0, 0, 0, 0.8);
+    -webkit-text-stroke: 4px #d23cdf;
+}
+
+.text-logo {
+    padding-top: 400px;
+    font-family: "Long Cang";
+    font-weight: 400;
+    font-size: 68px;
+    line-height: 68px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    min-height: 100%;
+}
+
+.text-logo a {
+    text-decoration: none;
+    color: #fc61ff;
+}

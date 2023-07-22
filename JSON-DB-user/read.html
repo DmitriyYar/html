@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>read</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="side-block">
+                <div class="menu">
+                    <h3 class="menu__title">Сортировка</h3>
+                    <button class="menu__button menu__button_1">по городу</button>
+                    <button class="menu__button menu__button_2">по компании</button>
+                </div>
+            </div>
+            <div class="content-block">  
+                <div class="content-header">
+                    <h3 class="content-title">Список пользователей</h3>
+                    <button class="menu__button menu__button_3" type="button">Редактировать</button>
+                </div>
+                <form class="form">
+                    <div class="form__wrapper">
+                        <p class="form__title">Name</p>     
+                        <input type="text" class="form__field" placeholder="Иван Иванов">
+                        <p class="form__title">User Name</p>
+                        <input type="text" class="form__field" placeholder="Ivan">
+                        <p class="form__title">E-mail</p>
+                        <input type="email" class="form__field" placeholder="example@mail.com">
+                        <p class="form__title">Street</p>
+                        <input type="text" class="form__field" placeholder="ул.Ленина">
+                        <p class="form__title">City</p>
+                        <input type="text" class="form__field" placeholder="Москва">
+                        <p class="form__title">Zip code</p>
+                        <input type="text" class="form__field" placeholder="1234234">
+                        <p class="form__title">Phone</p>
+                        <input type="tel" class="form__field" placeholder="899911122233">
+                        <p class="form__title">Website</p>
+                        <input type="url" class="form__field" placeholder="www.example.com">
+                        <p class="form__title">Comment</p>
+                        <textarea class="form__field form__field-1" placeholder="Your Message"></textarea><br>
+                    </div>
+                    <button class="menu__button menu__button_4" type="submit" disabled>Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="./js/read.js"></script>
+</body>
+
+</html>

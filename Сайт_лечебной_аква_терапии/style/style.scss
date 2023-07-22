@@ -1,0 +1,393 @@
+@font-face {
+    font-family: "Proxima Nova";
+    src: local("Proxima Nova"), url("../fonts/proximanova_regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1296px; //1736
+    margin: 0 auto;
+}
+
+body {
+    font-family: "El Messiri", sans-serif;
+    // line-height: 14px;
+    background-color: #162831;
+    color: #ffffff;
+}
+
+.heading {
+    // font-family: 'El Messiri', sans-serif;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 58.8px;
+
+    &::before {
+        content: url(../img/decor-left.svg);
+        margin-right: 45px;
+    }
+    &::after {
+        content: url(../img/decor-right.svg);
+        margin-left: 45px;
+    }
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.menu {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        list-style-type: none;
+    }
+    &__link {
+        text-decoration: none;
+        color: #ffffff;
+        // font-family: "Proxima Nova", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+    }
+    &__link:hover {
+        color: #018abe;
+    }
+}
+
+.button {
+    border: none;
+    background-color: #018abe;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: "El Messiri", sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 18px;
+    padding: 9px 15px;
+    border-radius: 3px;
+
+    &:hover {
+        background-color: #ffffff;
+        color: #018abe;
+    }
+}
+
+.promo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url(../img/promo-background.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 600px;
+    margin-top: 48px;
+
+    &__text {
+        // font-family: 'El Messiri', sans-serif;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33.6px;
+        padding-top: 136px;
+    }
+    &__text::before {
+        content: url(../img/decor-left-white.svg);
+        margin-right: 66px;
+    }
+    &__text::after {
+        content: url(../img/decor-right-white.svg);
+        margin-left: 66px;
+    }
+    &__title {
+        // font-family: 'El Messiri', sans-serif;
+        max-width: 587px;
+        font-size: 64px;
+        line-height: 89.6px;
+        text-align: center;
+        padding-top: 40px;
+    }
+}
+
+.services {
+    margin-top: 150px;
+    text-align: center;
+
+    &__text {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 33.6px;
+        // align-items: flex-start;
+    }
+
+    &-grid {
+        margin-top: 150px;
+        display: grid;
+        justify-content: center;
+        text-align: start;
+        grid-template-columns: repeat(auto-fit, 416px);
+        grid-auto-rows: 258px;
+        gap: 24px;
+
+        &__box {
+            display: flex;
+            align-items: flex-end;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        &__box--1 {
+            grid-row: 1/3;
+            background-image: url(../img/services-1-bg.png);
+            padding: 50px;
+        }
+        &__box--2 {
+            background-image: url(../img/services-1-bg.png);
+            padding: 30px 40px;
+        }
+        &__box--3 {
+            background-image: url(../img/services-2-bg.png);
+            padding: 30px 40px;
+        }
+        &__box--4 {
+            background-image: url(../img/services-2-bg.png);
+            padding: 30px 40px;
+        }
+        &__box--5 {
+            background-image: url(../img/services-2-bg.png);
+            padding: 30px 40px;
+        }
+    }
+}
+
+.reviews {
+    text-align: center;
+	margin-top: 150px;
+    
+	&-wrapper {
+        max-width: 1736px;
+        margin: 0 auto;
+        padding-top: 100px;
+    }
+
+    &-card {
+        max-width: 578px;
+        height: 360px;
+        text-align: justify;
+        background-color: #018abe;
+        border-radius: 10px;
+        padding: 50px 55px;
+        transform: scale(0.78);
+        overflow: hidden;
+
+        &__title {
+            font-family: "Proxima Nova", sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 28px;
+            padding-bottom: 20px;
+        }
+        &__text {
+            font-family: "Proxima Nova", sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}
+
+// S W I P E R
+.swiper {
+    &-slide {
+        display: flex;
+        justify-content: center;
+        // align-self: center;
+        opacity: 0.2;
+    }
+
+    &-slide-active {
+        opacity: 1;
+    }
+    &-slide-active .reviews-card {
+        transform: scale(1);
+        height: auto;
+    }
+
+    &-pagination {
+        position: static;
+        bottom: 0;
+        margin-top: 5px;
+
+        &-bullet {
+            padding: 10px 10px;
+            border-radius: 0;
+            background: grey;
+            // background: rgba(0,0,0,0.2);
+
+            &-active {
+                background: #018abe;
+            }
+        }
+    }
+}
+
+.about {
+    margin-top: 150px;
+    text-align: center;
+
+    &__title {
+        padding-bottom: 30px;
+    }
+    &__text {
+        font-family: "Proxima Nova", sans-serif;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 22px;
+        text-align: justify;
+    }
+    &__img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    &-grid {
+        margin-top: 150px;
+        display: grid;
+        justify-content: center;
+        text-align: start;
+        grid-template-columns: repeat(auto-fit, 526px);
+        grid-auto-rows: 400px;
+        column-gap: 24px;
+        row-gap: 100px;
+
+        &__box--4 {
+            padding-left: 50px;
+        }
+    }
+}
+
+.catalog {
+    margin-top: 150px;
+    text-align: center;
+
+    &__text {
+        padding-bottom: 31px;
+        width: 268px;
+
+        &::before {
+            content: url(../img/decor-little.svg);
+            margin-right: 20px;
+        }
+    }
+    &__price {
+        width: 87px;
+
+        &::after {
+            content: "p.";
+            margin-left: 5px;
+        }
+    }
+
+    &-grid {
+        margin-top: 150px;
+        display: grid;
+        justify-content: center;
+        text-align: start;
+        grid-template-columns: repeat(auto-fit, 526px);
+        grid-auto-rows: 455px;
+        column-gap: 24px;
+
+        &__box--1 {
+            padding-top: 111px;
+        }
+        &__box--2 {
+            text-align: center;
+        }
+    }
+
+    &__row {
+        display: flex;
+        gap: 55px;
+    }
+}
+
+.contacts {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    // gap: 24px;
+    column-gap: 48px;
+    // row-gap: 48px;
+    flex-wrap: wrap;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+}
+
+.visit-card {
+    width: 392px;
+    background-color: #018abe;
+    border-radius: 10px;
+    padding: 35px 45px;
+
+    & div:nth-last-of-type(1) {
+        margin-bottom: 30px;
+    }
+    &__row {
+        margin-top: 21px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    &__button {
+        border: none;
+        background-color: #ffffff;
+        cursor: pointer;
+        color: #018abe;
+        font-family: "Proxima Nova", sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        line-height: 18px;
+        padding: 9px 15px;
+        border-radius: 3px;
+
+        &:hover {
+            background-color: #018abe;
+            color: #ffffff;
+            outline: 1px solid #ffffff;
+        }
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+    }
+    &__text {
+        font-family: "Proxima Nova", sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+    }
+}
+
+.map {
+    width: 856px;
+}
+
+.footer {
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 30px 0;
+    }
+}

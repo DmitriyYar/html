@@ -1,0 +1,42 @@
+.service {
+    background-color: ($colorBgMain + #000002);
+    padding: 104px 0;
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.service-card {
+    width: 360px;
+    text-align: center;
+    color: #fbfbfb;
+
+    &-logo {
+        padding-top: 60px;
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+
+    &-title {
+        @include fontstyle(400, 20px, 24px);
+    }
+
+    &-text {
+        font-weight: 300;
+        padding-top: 16px;
+    }
+
+    &-img1 {
+        background-image: url(../img/logo-delivery.png);
+    }
+
+    &-img2 {
+        background-image: url(../img/logo-discounts.png);
+    }
+
+    &-img3 {
+        background-image: url(../img/logo-quality.png);
+    }
+}
